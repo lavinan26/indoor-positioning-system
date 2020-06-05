@@ -1,0 +1,101 @@
+[
+    {
+        "id": "4df4861c.f63be8",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "e6397554.5c2e38",
+        "type": "json",
+        "z": "4df4861c.f63be8",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 340,
+        "y": 240,
+        "wires": [
+            [
+                "c12aa9c6.f03b68"
+            ]
+        ]
+    },
+    {
+        "id": "c12aa9c6.f03b68",
+        "type": "csv",
+        "z": "4df4861c.f63be8",
+        "name": "",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": false,
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "id,mac1,mac2,mac3",
+        "skip": "0",
+        "strings": true,
+        "x": 500,
+        "y": 260,
+        "wires": [
+            [
+                "f6667610.f98ec8"
+            ]
+        ]
+    },
+    {
+        "id": "f6667610.f98ec8",
+        "type": "file",
+        "z": "4df4861c.f63be8",
+        "name": "",
+        "filename": "/home/lavinan26/Documents/GitHub/BLE_localization/sample2.csv",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 870,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c4f5aef1.5c2b9",
+        "type": "mqtt in",
+        "z": "4df4861c.f63be8",
+        "name": "",
+        "topic": "my_topic",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "c270c77b.87d4a8",
+        "x": 180,
+        "y": 240,
+        "wires": [
+            [
+                "e6397554.5c2e38"
+            ]
+        ]
+    },
+    {
+        "id": "c270c77b.87d4a8",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "lavinan",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    }
+]
