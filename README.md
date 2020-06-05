@@ -9,7 +9,7 @@ Deploy node-red App
 ```bash 
 node-red
 ```
-2. Go to http://localhost:1880/ or http://<publicIP>:1880/ for remote host
+2. Go to http://localhost:1880/ or http://{publicIP}:1880/ for remote host
 3. Import the flow "node_red_web_app.json" and deploy
 4. Go to http://localhost:1880/ui
 
